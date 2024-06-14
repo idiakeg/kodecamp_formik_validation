@@ -23,7 +23,7 @@ const validationSchema = Yup.object().shape({
 });
 
 const FormValidation = () => {
-    const [modalVisibility, setModalVisibility] = useState(true);
+    const [modalVisibility, setModalVisibility] = useState(false);
     const submitForm = (values, { resetForm }) => {
         setModalVisibility(true);
         // alert("Form submitted successfully!!");
