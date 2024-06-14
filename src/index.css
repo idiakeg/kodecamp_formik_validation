@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: powderblue;
+    position: relative;
+    min-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 50%;
+    margin-top: 5rem;
+    display: grid;
+    place-content: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 7px;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+form {
+    /* border: 1px solid blue; */
+    width: 70%;
+    margin-inline: auto;
+    display: grid;
+    gap: 1rem;
+}
+
+.form_group {
+    /* border: 1px solid red; */
+    display: grid;
+    gap: 0.4rem;
+}
+
+.form_group span {
+    color: red;
+    font-weight: 300;
+    font-size: 0.83rem;
+}
+
+.form_group input {
+    width: 100%;
+    padding-block: 10px;
+    padding-left: 10px;
+    font-size: 1.05rem;
+    border: 1.5px solid powderblue;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 2rem;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: powderblue;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    transition: all 0.3s ease-in;
+}
+
+button:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 4px 10px rgba(41, 41, 41, 0.358);
+}
+
+button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+/* ========= Modal container ========= */
+.modal_container {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal_content {
+    min-width: 60%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    padding: 40px 20px;
+    border-radius: 5px;
+}
+
+.modal_content button {
+    width: fit-content;
+    margin-inline: auto;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 700px) {
+    .wrapper {
+        width: 80%;
+        padding-inline: 10px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .form_group input {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .modal_content {
+        font-size: 1.2rem;
+        padding-inline: 10px;
+    }
+
+    .modal_content button {
+        font-size: 1rem;
+    }
+}
